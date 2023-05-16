@@ -1,81 +1,223 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import logo from '../assets/Logo.svg'
+import twitterIcon from '../assets/Twitter.svg'
+import Layout from '../layouts/Layout.astro'
+
+import avatar1 from '../assets/User Avatar 1.svg'
+import avatar2 from '../assets/User Avatar 2.svg'
+import avatar3 from '../assets/User Avatar 3.svg'
+import avatar4 from '../assets/User Avatar 4.svg'
+import avatar5 from '../assets/User Avatar 5.svg'
+import avatar6 from '../assets/User Avatar 6.svg'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title='Meeet - Challenge'>
+  <main>
+    <header>
+      <a href='/' class='logo'><img src={logo} alt='Meeet logo' /></a>
+    </header>
+    <section>
+      <h1>Meet New Entrepr<span>e</span>neurs</h1>
+      <p>
+        Meeet is a new social media platform for entrepreneurs to connect and
+        socialize.
+      </p>
+      <a class='notify' href='javascript:void(0);'>Get notified at launch</a>
+    </section>
+
+    <img aria-hidden='true' class='avatar-1' src={avatar1} alt='' />
+    <img aria-hidden='true' class='avatar-2' src={avatar2} alt='' />
+    <img aria-hidden='true' class='avatar-3' src={avatar3} alt='' />
+    <img aria-hidden='true' class='avatar-4' src={avatar4} alt='' />
+    <img aria-hidden='true' class='avatar-5' src={avatar5} alt='' />
+    <img aria-hidden='true' class='avatar-6' src={avatar6} alt='' />
+
+    <footer>
+      <a href='javascript:void(0);' class='social'
+        ><img src={twitterIcon} alt='Twitter Icon' /> Follow us on Twitter</a
+      >
+    </footer>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 0 1.5rem;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+  }
+  section {
+    z-index: 1;
+  }
+  main > img {
+    display: none;
+    position: absolute;
+    height: 5rem;
+    width: auto;
+  }
+  .avatar-2,
+  .avatar-3,
+  .avatar-6 {
+    display: block;
+  }
+  .avatar-2 {
+    top: 5rem;
+    right: 0.25rem;
+    height: 10rem;
+  }
+  .avatar-3 {
+    top: 6.5rem;
+    left: 3.5rem;
+    height: 6.5rem;
+  }
+  .avatar-6 {
+    bottom: 2rem;
+    right: 0.125rem;
+    height: 10.5rem;
+  }
+  header {
+    margin: 1rem 0;
+    z-index: 1;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-green);
+    margin: 1.75rem 0;
+  }
+
+  p {
+    margin: 2rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    gap: 1rem;
+    font-size: 1.25rem;
+  }
+  .notify {
+    background: var(--color-green);
+    color: var(--color-blue);
+    border-radius: 0.25rem;
+    padding: 1rem 1rem;
+  }
+  .notify:hover {
+    background: #22cca4;
+  }
+  .social {
+    color: inherit;
+  }
+  .social img {
+    width: 2.25rem;
+    height: auto;
+  }
+  .social:hover {
+    text-decoration: underline;
+  }
+  footer {
+    margin: 1rem 0;
+    z-index: 1;
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 6rem;
+    }
+    p {
+      width: 60%;
+    }
+    .avatar-1 {
+      display: block;
+      top: 13em;
+      right: 2rem;
+      height: 5rem;
+    }
+    .avatar-2 {
+      top: 2rem;
+      right: 2rem;
+      height: 8rem;
+    }
+    .avatar-3 {
+      top: 3.5rem;
+      left: 2rem;
+      height: 6.5rem;
+    }
+    .avatar-4 {
+      display: block;
+      bottom: 2rem;
+      right: 3rem;
+      height: 12rem;
+    }
+    .avatar-5 {
+      display: block;
+      top: 10rem;
+      right: 9rem;
+      height: 5.25rem;
+    }
+    .avatar-6 {
+      bottom: 16rem;
+      right: 3.5rem;
+      height: 6.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 7rem;
+      line-height: 1;
+      margin: 0;
+      letter-spacing: 0.5rem;
+    }
+    p {
+      width: 40%;
+    }
+    .avatar-1 {
+      /*  */
+      display: block;
+      top: 22rem;
+      right: 2rem;
+      height: 6rem;
+    }
+    .avatar-2 {
+      /*  */
+      top: 2rem;
+      right: 2rem;
+      height: 8rem;
+    }
+    .avatar-3 {
+      /*  */
+      top: 5rem;
+      left: -3.5rem;
+      height: 6.5rem;
+    }
+    .avatar-4 {
+      /*  */
+      display: block;
+      bottom: 2rem;
+      right: 3rem;
+      height: 14rem;
+    }
+    .avatar-5 {
+      /*  */
+      display: block;
+      top: 6rem;
+      right: 16rem;
+      height: 6rem;
+    }
+    .avatar-6 {
+      bottom: 20rem;
+      right: 30rem;
+      height: 6.5rem;
+    }
+  }
 </style>
