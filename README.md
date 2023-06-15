@@ -1,55 +1,51 @@
-# Astro Starter Kit: Basics
+# Meeet Waitlist Template (Codewell Challenge)
 
-```
-npm create astro@latest -- --template basics
-```
+Built to practice my planning and CSS skills, I used [Astro](https://astro.build/) as framework, this lading page is fully responsive, it has a simple yet colorful design.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+> The design is not my own, it's a template from a Codewell challenge. Check [acknowledgments](#acknowledgments) for more.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Demo (design)
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+![Landing Page — Desktop](./design/Landing%20Page%20-%20Desktop%20View.png)
 
+> Other layouts can be found in the [design](./design) directory.
 
-## 🚀 Project Structure
+## Getting Started
 
-Inside of your Astro project, you'll see the following folders and files:
+These instructions will help you run the project on your local machine for development purposes.
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+### Prerequisites
+
+Make sure to have everything that is required before you try to run the project.
+
+- [Node.js](https://nodejs.org/en/download/) `v16.16.0+`
+- [PNPM](https://pnpm.io/installation)
+
+### Installation
+
+Install all dependencies required for the project with PNPM.
+
+```bash
+pnpm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Development Server
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Once everything is set up, you can follow these steps:
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. Start the development server by executing the command:
 
-## 🧞 Commands
+   ```bash
+   npm run dev
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. Open a web browser and navigate to [`http://localhost:3000`](https://localhost:3000/) to view the project's home page.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Acknowledgments
 
-## 👀 Want to learn more?
+- [Codewell](https://www.codewell.cc/)
+- [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contact Info
+
+Build by [@TonyMckes](https://tonymckes.vercel.app/) - feel free to contact me!
